@@ -6,53 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Frontend Mentor | Profile card component</title>
 </head>
 <body>
-    <main class="hero">
-        <div class="hero__circle hero__circle--top"></div>
-        <div class="hero__circle hero__circle--botton"></div>
-        <div class="hero__card">
-            <img src="./images/image-victor.jpg" alt="avatar" class="card__img">
-            <p class="card__name">
-                <a href="#" class="name__cta">
-                    Victor Crest
-                </a>
-                26
-            </p>
-            <p class="card__location">
-                London
-            </p>
-            <div class="card__statistics">
-                <div class="statistics__data">
-                    <p class="data__number">
-                        80K
-                    </p>
-                    <p class="data__information">
-                        Followers
-                    </p>
-                </div>
-                <div class="statistics__data">
-                    <p class="data__number">
-                        803K
-                    </p>
-                    <p class="data__information">
-                        Likes
-                    </p>
-                </div>
-                <div class="statistics__data">
-                    <p class="data__number">
-                        1.4K
-                    </p>
-                    <p class="data__information">
-                        Photos
-                    </p>
-                </div>
+    <main class="main">
+        <section class="main__card">
+            <img src="./images/image-victor.jpg" alt="avatar victor" class="card__image animate__animated animate__fadeInDownBig">
+            <h1 class="card__title animate__animated animate__flipInX animate__slower">
+                Victor Crest
+                <span>26</span>
+            </h1>
+            <p class="card__paragraph animate__animated animate__flipInY animate__slower">London</p>
+            <div class="card__container">
+                <p class="card__data animate__animated animate__fadeInLeft">
+                    80K
+                    <span>Followers</span>
+                </p>
+                <p class="card__data animate__animated animate__fadeInUp">
+                    803K
+                    <span>Likes</span>
+                </p>
+                <p class="card__data animate__animated animate__fadeInRight">
+                    1.4K
+                    <span>Photos</span>
+                </p>
             </div>
-        </div>
+        </section>
     </main>
-    <footer class="attribution">
-        Coded by <a href="https://github.com/flchris">CHRIS FL</a>.
-    </footer>
 </body>
 </html>

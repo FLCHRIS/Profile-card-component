@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+$fontKumbh: 'Kumbh Sans', sans-serif;
+
+$DarkGray: hsl(0, 0%, 59%);
+$DarkCyan: hsl(185, 75%, 39%);
+$VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$DarkGrayishBlue: hsl(227, 10%, 46%);
+
+html {
+    font-family: 62.5%;
+}
+.main {
+    font-family: $fontKumbh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $DarkCyan;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -300px;
+        left: -300px;
+        width: 600px;
+        height: 600px;
+        background-image: url('../images/bg-pattern-top.svg');
+        background-size: cover;
+        z-index: 5;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -300px;
+        right: -300px;
+        width: 600px;
+        height: 600px;
+        background-image: url('../images/bg-pattern-bottom.svg');
+        background-size: cover;
+        z-index: 5;
+    }
+    &__card {
+        z-index: 10;
+        overflow: hidden;
+        width: 90%;
+        max-width: 340px;
+        margin: 0 auto;
+        background-image: url('../images/bg-pattern-card.svg');
+        background-size: 100% 140px;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 15px 0px rgba($VeryDarkDesaturatedBlue, .3);
+        .card__image {
+            border-radius: 50%;
+            margin: 90px auto 0;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+        .card__title {
+            text-align: center;
+            color: $VeryDarkDesaturatedBlue;
+            font-size: 1.4rem;
+            margin: .8em 0 .5em;
+            span {
+                color: $DarkGrayishBlue;
+                font-weight: 400;
+            }
+        }
+        .card__paragraph {
+            text-align: center;
+            color: $DarkGray;
+            font-family: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1em;
+        }
+        .card__container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            border-top: 1px solid $DarkGray;
+            padding: 1em;
+            p {
+                font-family: 1.4rem;
+                text-align: center;
+                font-weight: 700;
+                color: $VeryDarkDesaturatedBlue;
+                span {
+                    font-weight: 400;
+                    color: $DarkGray;
+                    font-size: .8rem;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}

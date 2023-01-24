@@ -1,133 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
-:root{
-    --DarkGray: hsl(0, 0%, 59%);
-    --DarkCyan: hsl(185, 75%, 39%);
-    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
-    --DarkGrayishBlue: hsl(227, 10%, 46%);
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+html {
+  font-family: 62.5%;
 }
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 18px;
-}
-.hero{
-    background-color: var(--DarkCyan);
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hero__circle{
-    width: 500px;
-    height: 500px;
-    z-index: 50;
-}
-.hero__circle--botton{
-    position: absolute;
-    bottom: -250px;
-    right: -250px;
-    background-image: url('../images/bg-pattern-bottom.svg');
-    background-size: cover;
-}
-.hero__circle--top{
-    position: absolute;
-    top: -250px;
-    left: -250px;
-    background-image: url('../images/bg-pattern-top.svg');
-    background-size: cover;
-}
-.hero__card{
-    width: 340px;
-    border-radius: 1rem;
-    background-color: #fff;
-    background-image: url('../images/bg-pattern-card.svg');
-    background-size: 100% 150px;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    box-shadow: 1px 1px 13px 1px rgba(0,0,0,0.3);
 
+.main {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185deg, 75%, 39%);
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
 }
-.card__img{
-    margin-top: 100px;
-    object-fit: cover;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 5px solid #fff;
+.main::before {
+  content: "";
+  position: absolute;
+  top: -300px;
+  left: -300px;
+  width: 600px;
+  height: 600px;
+  background-image: url("../images/bg-pattern-top.svg");
+  background-size: cover;
+  z-index: 5;
 }
-.card__name{
-    color: var(--DarkGrayishBlue);
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 1.2rem 0 0;
+.main::after {
+  content: "";
+  position: absolute;
+  bottom: -300px;
+  right: -300px;
+  width: 600px;
+  height: 600px;
+  background-image: url("../images/bg-pattern-bottom.svg");
+  background-size: cover;
+  z-index: 5;
 }
-.name__cta{
-    text-decoration: none;
-    color: var(--VeryDarkDesaturatedBlue);
-    font-weight: 700;
-    padding-right: .2rem;
+.main__card {
+  z-index: 10;
+  overflow: hidden;
+  width: 90%;
+  max-width: 340px;
+  margin: 0 auto;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-size: 100% 140px;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(45, 50, 72, 0.3);
 }
-.card__location{
-    margin: 1rem 0;
-    font-size: 1rem;
-    color: var(--DarkGrayishBlue);
+.main__card .card__image {
+  border-radius: 50%;
+  margin: 90px auto 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 5px solid #fff;
 }
-.card__statistics{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 1.4rem 0 1.6rem;
-    padding-top: 1.7rem;
-    border-top: 1px solid var(--DarkGray);
+.main__card .card__title {
+  text-align: center;
+  color: hsl(229deg, 23%, 23%);
+  font-size: 1.4rem;
+  margin: 0.8em 0 0.5em;
 }
-.statistics__data{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.main__card .card__title span {
+  color: hsl(227deg, 10%, 46%);
+  font-weight: 400;
 }
-.data__number{
-    color: var(--VeryDarkDesaturatedBlue);
-    font-size: 1.5rem;
-    font-weight: 700;
+.main__card .card__paragraph {
+  text-align: center;
+  color: hsl(0deg, 0%, 59%);
+  font-family: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1em;
 }
-.data__information{
-    margin-top: .5rem;
-    font-size: .8rem;
-    letter-spacing: 2px;
-    color: var(--DarkGrayishBlue);
+.main__card .card__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid hsl(0deg, 0%, 59%);
+  padding: 1em;
 }
-.attribution {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 12px;
-    font-weight: 400;
-    z-index: 90;
-    text-align: end;
+.main__card .card__container p {
+  font-family: 1.4rem;
+  text-align: center;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
 }
-.attribution a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-}
-@media screen and (max-width: 1400px){
-    .hero__circle{
-        width: 700px;
-        height: 700px;
-    }
-    .hero__circle--botton{
-        bottom: -320px;
-        right: -120px;
-    }
-}
+.main__card .card__container p span {
+  font-weight: 400;
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=index.css.map */
